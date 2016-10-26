@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">Our Wedding M&amp;J</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="loading">Loading</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect" translatable="false">Disconnect</string>
+    <string name="desc_google_icon" translatable="false">Google Logo</string>
+    <string name="title_text">Connect with&#8230;</string>
+    <string name="signed_out" translatable="false">Signed out</string>
+    <string name="sign_in">Sign in</string>
+    <string name="honey_moon">Honey Moon</string>
+    <string name="guests">Guests</string>
+    <string name="credits">Credits</string>
+    <string name="guestName">Guest Name</string>
+    <string name="gifts_list">Gifts list</string>
+    <string name="findStore">Find a store near you</string>
+    <string name="app_complain">App complain</string>
+    <string name="gift_bought">Gift bought</string>
+    <string name="confirm_presence">Confirm presence</string>
+    <string name="confirm_absence">Confirm absence</string>
+    <string name="emailPopupTitle">Chose the email\'s subject</string>
+    <string name="gotToWebSite">Go to web site</string>
+    <string name="buyQuota">Buy a quota</string>
+    <string name="linkToMaps">See it on Maps</string>
+    <string name="qr_code" translatable="false">Qr Code Reader</string>
+    <string name="selectGuestName">Who are you?</string>
+    <string name="ok" translatable="false">OK</string>
+    <!--Teste -->
+    <string name="server_client_id" translatable="false">104975393991-bve0b73f1mit0htcqasfnivtsqf9i40v.apps.googleusercontent.com</string>
+    <!-- Producção -->
+    <!--<string name="server_client_id" translatable="false">938883859289-0i5u6sno6gc358m2ev09ucujdkvjq4ih.apps.googleusercontent.com</string>-->
+    <string name="confirmed">Confirmed</string>
+    <string name="invited">Invited</string>
+    <string name="quota_date">Date</string>
+    <string name="quota_value">Quota value</string>
+    <string name="btnSave">Save</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="qr_code_reader" translatable="false">QRCode reader</string>
+    <string name="inform_code">Inform code</string>
+    <string name="inform_code_2">Please inform de code written down the QRCode</string>
+    <string name="noInviteFound">No invite found</string>
+    <string name="contact_us_long">Please contact us to help you!</string>
+    <string name="success" translatable="false">Success</string>
+    <string name="login_success">You were successfully loged in!</string>
+    <string name="selectDate">Pick Date</string>
+    <string name="date_in_the_future">Date is in the future</string>
+    <string name="no_value_informed">Sorry, but no value were informed :(</string>
+    <string name="quota_saved">Quota saved!</string>
+    <string name="thanks_quota">We are very happy that you did this!</string>
+    <string name="quota_error">Error while saving quota :(</string>
+    <string name="wedding_date" translatable="false">14/01/2017</string>
+    <string name="churchLocation" translatable="false">Igreja Evangélica Menonita do Água Verde</string>
+    <string name="churchName" translatable="false">Igreja Evangélica Menonita do Água Verde</string>
+    <string name="churchAddress" translatable="false">Rua Amazonas, 986 - Água Verde, Curitiba - PR</string>
+    <string name="txtInit">Hi,\n\tit is an honor having you at our wedding ceremony on <b>January 14, 2017</b>. Please save the date, and show up at the ceremony to have a great time with us. You can use this app to contact other people attending the ceremony. Try it out, and have lots of fun!\n\tMr. and (soon to be) Mrs. Dyck</string>
+    <string name="txtDummy" translatable="false">It is an honor having you at our wedding ceremony on January 14, 2017. Please save the date, and show up at the ceremony to have a great time with us. You can use this app to contact other people attending the ceremony. Try it out, and have lots of fun!</string>
+    <string name="txtDummySignature" translatable="false">Mr. and (soon to be) Mrs. Dyck</string>
+    <string name="home">Home</string>
+    <string name="days">Days</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="txtCredit">Credits</string>
+    <string name="txtCredit1"><i><b>Developer:</b></i>
+    João Guilherme Dÿck.\n\n<i><b>Information designer:</b></i> Michele Simonian
+</string>
+    <string name="story">Stories of our lives</string>
+    <string name="camera_permission">To read the QRCode, we need access to your camera</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="inser_manualy">Please insert the code manually</string>
+    <string name="firstStory"><b>Hello people!</b>\n\nWe are very excited with our ceremony and that you will be there! But while the time for celebrating doesn\'t, we will tell some stories about us! Some of them are happy ones, other sad, but that\'s how we became us! Please keep track of this part of the app to know us better!\n\nMr. and (soon to be) Mrs. Dyck</string>
+    <string name="external_data_permission">We need your permission to cache some pictures for the app</string>
+    <string name="pictures_not_show">Many pictures will not be shown. But you can change it by your system\'s settings.</string>
+    <string name="bank_info">You\'re about to buy us some fun at our honey moon trip! Please inform us the date and value you trasfered to us! Our bank info are:\n<b>Bank:</b> Santander\n<b>Account:</b> 006459&#8211;9\n<b>Bank Branch:</b>0813\n<b>CPF:</b>022.588.759&#8211;27\n<b>Name:</b> Michele Simonian</string>
+    <string name="info" translatable="false">Info</string>
+    <string name="contentImgCard" translatable="false">Image for the story</string>
+    <string name="comment" translatable="false">Comment</string>
+    <string name="title_card">Story Title</string>
+    <string name="write_comment">Write a comment</string>
+    <string name="send">Send</string>
+    <string name="no_comments_yet">No comments yet</string>
+    <string name="comment_saved">Comment saved</string>
+    <string name="comment_text_empty">Comment text is empty</string>
+    <string name="comment_to_long">Comment to long!</string>
+    <string name="comment_limit">Please write less then 200 characters!</string>
+    <string name="user_name_ad" translatable="false">User Name ad</string>
+    <string name="comment_not_save">Comment not save</string>
+    <string name="comment_internal_error">An internal error occurred. Please forgive us :(</string>
+    <string name="see_it_on_maps">See it on maps</string>
+    <plurals name="comments">
+        <item quantity="zero">Comment zero</item>
+        <item quantity="one">%d comment</item>
+        <item quantity="many">%d comments</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
+</resources>

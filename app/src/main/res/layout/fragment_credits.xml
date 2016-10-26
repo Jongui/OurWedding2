@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/iniCard"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgCard"
+                android:contentDescription=""
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/img_card" />
+
+            <TextView
+                android:id="@+id/txtCredit"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@+id/imgCard"
+                android:layout_marginTop="16dp"
+                android:text="@string/txtCredit"
+                android:textAlignment="center"
+                android:textSize="21dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_below="@+id/txtCredit"
+                android:layout_marginTop="16dp"
+                android:text="@string/txtCredit1"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

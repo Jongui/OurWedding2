@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/lblGuestName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/imgGuest"
+        android:layout_toRightOf="@+id/imgGuest"
+        android:text="@string/guestName"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <!--<joaogd53.com.br.ripplelibrary.RippleView-->
+        <!--android:id="@+id/btnTrash"-->
+        <!--android:layout_width="32dp"-->
+        <!--android:layout_height="32dp"-->
+        <!--android:layout_marginLeft="150dp"-->
+        <!--android:layout_toEndOf="@+id/lblRoomsName"-->
+        <!--android:layout_toRightOf="@+id/lblRoomsName">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:src="@mipmap/ico_trash" />-->
+    <!--</joaogd53.com.br.ripplelibrary.RippleView>-->
+</RelativeLayout>

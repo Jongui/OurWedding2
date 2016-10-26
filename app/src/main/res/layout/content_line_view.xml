@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content">
+
+    <TextView
+        style="@style/ContentMainBadgeTitle"
+        android:id="@+id/content_avatar_title"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_below="@id/content_avatar_title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/lblGuestName"
+        android:layout_alignTop="@id/imgUser"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/imgUser"
+        android:layout_width="wrap_content"
+        android:textColor="@color/mainTextColor"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/content_rating_stars"
+        android:layout_alignStart="@id/lblGuestName"
+        android:layout_below="@id/lblGuestName"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <TextView
+        android:layout_alignBottom="@+id/content_rating_stars"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-2dp"
+        android:layout_marginStart="3dp"
+        android:layout_toEndOf="@id/content_rating_stars"
+        android:layout_width="wrap_content"
+        android:textColor="@color/contentBadgeTitle"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/arrow" />
+
+</RelativeLayout>

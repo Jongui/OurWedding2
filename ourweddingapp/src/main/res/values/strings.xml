@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ourweddingapp</string>
+    <string name="connectionRefused">Connection Refused</string>
+    <string name="loading">Loading</string>
+</resources>

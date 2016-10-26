@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/mnu_home"
+            android:icon="@drawable/ico_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/gifts_list" />
+        <item
+            android:id="@+id/mnu_honey_moon"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/honey_moon" />
+        <item
+            android:id="@+id/mnu_guests"
+            android:icon="@drawable/ic_persons"
+            android:title="@string/guests" />
+        <item
+            android:id="@+id/mnu_story"
+            android:icon="@drawable/ic_story"
+            android:title="@string/story" />
+        <item
+            android:id="@+id/mnu_credits"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/credits" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_share"-->
+    <!--android:icon="@drawable/ic_menu_share"-->
+    <!--android:title="Share" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_send"-->
+    <!--android:icon="@drawable/ic_menu_send"-->
+    <!--android:title="Send" />-->
+    <!--</menu>-->
+    <!--</item>-->
+
+</menu>
