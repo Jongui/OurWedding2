@@ -9,10 +9,10 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/ic_web" />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/gotToWebSite"
         android:textColor="@color/mainTextColor"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:textStyle="bold" />
 
 </joaogd53.com.br.customViews.InternetAddressView>

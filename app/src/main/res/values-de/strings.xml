@@ -71,5 +71,6 @@
     <string name="comment_internal_error">Ein interner Fehler is aufgetreten. Bitte verzeihe uns :(</string>
     <string name="comment_not_save">Kommentar nicht gespeichert</string>
     <string name="see_it_on_maps">See es in Maps</string>
+    <string name="info">Hier clicken</string>
 
 </resources>

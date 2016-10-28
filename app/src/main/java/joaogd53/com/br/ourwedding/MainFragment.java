@@ -16,9 +16,6 @@ import joaogd53.com.br.adapter.StoresFoldingCellAdapter;
 import joaogd53.com.br.ourweddingapp.application.OurWeddingApp;
 import joaogd53.com.br.ourweddingapp.model.Store;
 
-/**
- * Created by root on 22/08/16.
- */
 public class MainFragment extends Fragment {
 
     @Override

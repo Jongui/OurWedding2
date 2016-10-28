@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class Story {
@@ -22,21 +23,39 @@ public class Story {
     private Uri image;
     private int commentsCount;
     private List<StoryComment> comments;
-    private static Story lastStory;
+    private static HashMap<Integer, Story> storyHashMap;
+//    private static Story lastStory;
 
     private Story() {
         comments = new ArrayList<>();
     }
 
-    public static Story getLastStory() {
-        if (lastStory == null) {
-            lastStory = new Story();
-        }
-        return lastStory;
+    static {
+        storyHashMap = new HashMap<>();
+    }
+//    public static Story getLastStory() {
+//        if (lastStory == null) {
+//            lastStory = new Story();
+//        }
+//        return lastStory;
+//    }
+
+//    public static void setLastStory(Story story) {
+//        lastStory = story;
+//    }
+
+    public static HashMap<Integer, Story> getAllInstance() {
+        return storyHashMap;
     }
 
-    public static void setLastStory(Story story) {
-        lastStory = story;
+    public static Story getInstance(int idStory) {
+        Story ret = storyHashMap.get(idStory);
+        if (ret == null) {
+            ret = new Story();
+            ret.idStory = idStory;
+            storyHashMap.put(idStory, ret);
+        }
+        return ret;
     }
 
     public String getAuthor() {
@@ -97,7 +116,8 @@ public class Story {
 
     public static class StoryBuilder {
         public static Story buildFromJson(JSONObject jsonObject) throws JSONException {
-            Story story = new Story();
+            int idStory = jsonObject.getInt("idStory");
+            Story story = Story.getInstance(idStory);
             SimpleDateFormat sdf = new SimpleDateFormat(Story.dateFormatString);
             story.author = jsonObject.getString("author");
             JSONObject file = jsonObject.getJSONObject("file");

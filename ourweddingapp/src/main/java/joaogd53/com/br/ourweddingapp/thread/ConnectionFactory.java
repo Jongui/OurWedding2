@@ -18,6 +18,7 @@ public class ConnectionFactory {
     public static final int GUEST_BY_ID_SERVLET = 8;
     public static final int GET_STORY_COMMENTS_SERVLET = 9;
     public static final int SAVE_COMMENT_RUNNABLE = 10;
+    public static final int GET_ALL_STORIES_SERVLET = 11;
 
     private ConnectionFactory() {
     }
@@ -88,6 +89,10 @@ public class ConnectionFactory {
                 case SAVE_COMMENT_RUNNABLE:
                     url = new URL("http://192.168.100.2:8080/OurWedding/SaveCommentServlet");
                     break;
+                case GET_ALL_STORIES_SERVLET:
+                    url = new URL("http://192.168.100.2:8080/OurWedding/GetAllStoriesServlet");
+                    break;
+
             }
             URLConnection connection = url.openConnection();
             connection.setRequestProperty("content-type", "application/json; charset=utf-8");

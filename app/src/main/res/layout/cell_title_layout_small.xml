@@ -26,7 +26,7 @@
             android:layout_height="45dp"
             android:layout_alignParentStart="true"
             android:contentDescription="@string/contentImgCard"
-            android:textSize="26sp" />
+            android:textSize="26dp" />
 
         <!--<ImageView-->
         <!--android:id="@+id/expanded_image"-->
@@ -55,7 +55,7 @@
             android:fadingEdge="horizontal"
             android:singleLine="true"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
                 android:layout_marginStart="4dp"
                 android:text="@string/confirmed"
                 android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                android:textSize="12dp" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

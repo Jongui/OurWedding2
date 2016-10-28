@@ -76,7 +76,7 @@
     <string name="external_data_permission">We need your permission to cache some pictures for the app</string>
     <string name="pictures_not_show">Many pictures will not be shown. But you can change it by your system\'s settings.</string>
     <string name="bank_info">You\'re about to buy us some fun at our honey moon trip! Please inform us the date and value you trasfered to us! Our bank info are:\n<b>Bank:</b> Santander\n<b>Account:</b> 006459&#8211;9\n<b>Bank Branch:</b>0813\n<b>CPF:</b>022.588.759&#8211;27\n<b>Name:</b> Michele Simonian</string>
-    <string name="info" translatable="false">Info</string>
+    <string name="info">Click here</string>
     <string name="contentImgCard" translatable="false">Image for the story</string>
     <string name="comment" translatable="false">Comment</string>
     <string name="title_card">Story Title</string>

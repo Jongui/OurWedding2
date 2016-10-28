@@ -18,6 +18,7 @@ import joaogd53.com.br.ourweddingapp.model.Story;
 import joaogd53.com.br.ourweddingapp.model.StoryComment;
 import joaogd53.com.br.ourweddingapp.thread.GetAllGuestsRunnable;
 import joaogd53.com.br.ourweddingapp.thread.GetAllHoneyMoonGiftsRunnable;
+import joaogd53.com.br.ourweddingapp.thread.GetAllStoriesRunnable;
 import joaogd53.com.br.ourweddingapp.thread.GetLastStoriesRunnable;
 import joaogd53.com.br.ourweddingapp.thread.GetStoryCommentsRunnable;
 import joaogd53.com.br.ourweddingapp.thread.GuestByIdRunnable;
@@ -211,17 +212,17 @@ public class OurWeddingApp {
         return runnable.getReturnCode();
     }
 
-    public Story lastStory() {
-        GetLastStoriesRunnable runnable = new GetLastStoriesRunnable((Activity) this.context);
-        Thread t = new Thread(runnable);
-        t.start();
-        try {
-            t.join();
-        } catch (InterruptedException ex) {
-            ex.printStackTrace();
-        }
-        return Story.getLastStory();
-    }
+//    public Story lastStory() {
+//        GetLastStoriesRunnable runnable = new GetLastStoriesRunnable((Activity) this.context);
+//        Thread t = new Thread(runnable);
+//        t.start();
+//        try {
+//            t.join();
+//        } catch (InterruptedException ex) {
+//            ex.printStackTrace();
+//        }
+//        return Story.getLastStory();
+//    }
 
     public Guest getGuestById(int idGuest) {
         GuestByIdRunnable runnable = new GuestByIdRunnable((Activity) this.context, idGuest);
@@ -258,4 +259,18 @@ public class OurWeddingApp {
         }
         return runnable.getReturnCode();
     }
+
+    public List<Story> getStories() {
+        GetAllStoriesRunnable runnable = new GetAllStoriesRunnable((Activity) this.context);
+        Thread t = new Thread(runnable);
+        t.start();
+        try {
+            t.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        HashMap<Integer, Story> hashMap = Story.getAllInstance();
+        return new ArrayList<>(hashMap.values());
+    }
+
 }

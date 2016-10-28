@@ -24,6 +24,6 @@
         android:layout_toRightOf="@+id/imgDirection"
         android:text="@string/findStore"
         android:textColor="@color/mainTextColor"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:textStyle="bold" />
 </joaogd53.com.br.customViews.DirectionView>

@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 
-public class DirectionView extends RelativeLayout implements View.OnClickListener {
+public class DirectionView extends LinearLayout implements View.OnClickListener {
 
     private String query;
 

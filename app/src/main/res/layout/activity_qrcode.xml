@@ -17,7 +17,7 @@
         android:background="@drawable/button_blue"
         android:onClick="qrScanner"
         android:text="@string/qr_code_reader"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="@color/bgTitleRight"
         android:textStyle="bold"
         android:layout_alignParentTop="true"

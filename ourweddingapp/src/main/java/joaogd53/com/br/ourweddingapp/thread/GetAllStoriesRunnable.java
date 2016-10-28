@@ -3,6 +3,7 @@ package joaogd53.com.br.ourweddingapp.thread;
 import android.app.Activity;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,11 +19,9 @@ import joaogd53.com.br.ourweddingapp.R;
 import joaogd53.com.br.ourweddingapp.application.OurWeddingApp;
 import joaogd53.com.br.ourweddingapp.model.Story;
 
-/**
- * Created by root on 08/10/16.
- */
-public class GetLastStoriesRunnable extends AbstractConnection {
-    public GetLastStoriesRunnable(Activity context) {
+public class GetAllStoriesRunnable extends AbstractConnection {
+
+    public GetAllStoriesRunnable(Activity context) {
         super(context);
     }
 
@@ -55,8 +54,12 @@ public class GetLastStoriesRunnable extends AbstractConnection {
             jsonObject = new JSONObject(ret);
             this.returnCode = Integer.parseInt(jsonObject.get("status").toString());
             if (this.returnCode == 0) {
-                Story story = Story.StoryBuilder.buildFromJson(jsonObject.getJSONObject("story"));
-//                Story.setLastStory(story);
+                JSONArray storiesArray = jsonObject.getJSONArray("stories");
+                for (int i = 0; i < storiesArray.length(); i++) {
+                    JSONObject jsonStory = storiesArray.getJSONObject(i);
+                    Story.StoryBuilder.buildFromJson(jsonStory);
+//                    Story.setLastStory(story);
+                }
             } else {
                 final String message = jsonObject.get("errorMessage").toString();
                 this.context.runOnUiThread(new Runnable() {
@@ -75,7 +78,7 @@ public class GetLastStoriesRunnable extends AbstractConnection {
     public void run() {
         try {
             URLConnection connection = ConnectionFactory.getInstance()
-                    .connectionFactory(ConnectionFactory.GET_LAST_STORIES_SERVLET);
+                    .connectionFactory(ConnectionFactory.GET_ALL_STORIES_SERVLET);
             this.writeOutput(connection);
             this.writeInput(connection);
         } catch (ConnectException e) {

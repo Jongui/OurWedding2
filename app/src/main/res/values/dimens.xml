@@ -8,4 +8,8 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="g_top_margin">100dp</dimen>
     <dimen name="dialog_fragment_width">300dp</dimen>
+    <dimen name="count_width">75dp</dimen>
+    <dimen name="count_total_width">300dp</dimen>
+    <dimen name="custom_text_medium">14sp</dimen>
+    <dimen name="custom_text_large">18sp</dimen>
 </resources>
