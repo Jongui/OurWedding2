@@ -1,6 +1,7 @@
 package joaogd53.com.br.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +24,6 @@ import joaogd53.com.br.imageloader.ImageLoader;
 import joaogd53.com.br.ourwedding.R;
 import joaogd53.com.br.ourweddingapp.model.Guest;
 
-/**
- * Created by root on 28/08/16.
- */
 public class GuestsFoldingCellAdapter extends ArrayAdapter<Guest> {
     private HashSet<Integer> unfoldedIndexes = new HashSet<>();
     private Context context;
@@ -34,9 +32,8 @@ public class GuestsFoldingCellAdapter extends ArrayAdapter<Guest> {
     public GuestsFoldingCellAdapter(Context context, List<Guest> guests) {
         super(context, 0, guests);
         this.context = context;
-        List<Guest> temp = guests;
         this.guests = new ArrayList<>();
-        for (Iterator<Guest> it = temp.iterator(); it.hasNext(); ) {
+        for (Iterator<Guest> it = guests.iterator(); it.hasNext(); ) {
             Guest guest = it.next();
             if (guest.getAge() >= 12) {
                 this.guests.add(guest);
@@ -52,6 +49,7 @@ public class GuestsFoldingCellAdapter extends ArrayAdapter<Guest> {
 
 
     @Override
+    @NonNull
     public View getView(final int position, View convertView, ViewGroup parent) {
         // get gift for selected view
         Guest guest;
@@ -101,8 +99,12 @@ public class GuestsFoldingCellAdapter extends ArrayAdapter<Guest> {
                 statusText.setText(cell.getResources().getString(R.string.invited));
                 break;
             case 2:
-                statusImage.setImageResource(R.drawable.ic_confirm);
+                statusImage.setImageResource(R.drawable.ic_confirm_green);
                 statusText.setText(cell.getResources().getString(R.string.confirmed));
+                break;
+            case 3:
+                statusImage.setImageResource(R.drawable.ic_cancel);
+                statusText.setText(cell.getResources().getString(R.string.not_going));
                 break;
             default:
                 statusImage.setImageResource(R.drawable.ic_invite);
@@ -173,11 +175,11 @@ public class GuestsFoldingCellAdapter extends ArrayAdapter<Guest> {
             registerUnfold(position);
     }
 
-    public void registerFold(int position) {
+    private void registerFold(int position) {
         unfoldedIndexes.remove(position);
     }
 
-    public void registerUnfold(int position) {
+    private void registerUnfold(int position) {
         unfoldedIndexes.add(position);
     }
 

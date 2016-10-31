@@ -20,20 +20,21 @@
         android:id="@+id/inviteGuestList"
         android:layout_width="@dimen/dialog_fragment_width"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtTitleComment"
         android:background="@color/bgTitleRight" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/bgTitleRight"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
         <Button
             android:id="@+id/btnSave"
             android:layout_width="100dp"
             android:layout_height="24dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:background="@drawable/button_green"
-            android:textColor="@color/mainTextColor"
+            android:textColor="@color/bgTitleRight"
             android:textSize="12dp"
             android:textStyle="bold"
             android:text="@string/btnSave"/>
@@ -41,9 +42,9 @@
             android:id="@+id/btnCancel"
             android:layout_width="100dp"
             android:layout_height="24dp"
-            android:layout_marginLeft="68dp"
+            android:layout_marginStart="68dp"
             android:background="@drawable/button_red"
-            android:textColor="@color/mainTextColor"
+            android:textColor="@color/bgTitleRight"
             android:textSize="12dp"
             android:textStyle="bold"
             android:text="@string/btnCancel"/>

@@ -15,8 +15,9 @@ import joaogd53.com.br.adapter.GuestConfirmAdapter;
 import joaogd53.com.br.ourwedding.R;
 import joaogd53.com.br.ourweddingapp.application.OurWeddingApp;
 import joaogd53.com.br.ourweddingapp.model.Guest;
+import joaogd53.com.br.sweetalertdialog.SweetAlertDialog;
 
-public class ConfirmPresenceDialogFragment extends DialogFragment implements View.OnClickListener{
+public class ConfirmPresenceDialogFragment extends DialogFragment implements View.OnClickListener {
 
     private String code;
     private GuestConfirmAdapter adapter;
@@ -39,18 +40,24 @@ public class ConfirmPresenceDialogFragment extends DialogFragment implements Vie
         inviteGuestList.setAdapter(adapter);
         Button btnSave = (Button) view.findViewById(R.id.btnSave);
         btnSave.setOnClickListener(this);
+        Button btnCancel = (Button) view.findViewById(R.id.btnCancel);
+        btnCancel.setOnClickListener(this);
         return view;
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()){
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.btnSave:
                 List<Guest> guests = adapter.getGuestList();
                 OurWeddingApp.getInstance().updateGuests(guests);
+                new SweetAlertDialog(view.getContext(), SweetAlertDialog.SUCCESS_TYPE)
+                        .setTitleText(view.getContext().getResources().getString(R.string.changes_saved))
+                        .show();
                 break;
             case R.id.btnCancel:
                 break;
         }
+        this.dismiss();
     }
 }

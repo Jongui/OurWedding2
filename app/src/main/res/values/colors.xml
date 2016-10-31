@@ -20,7 +20,7 @@
     <color name="blue_grey_500">#607D8B</color>
     <color name="blue">#369de1</color>
     <color name="colorSecondary">#CDB7B5</color>
-    <color name="green">#DAF7A6</color>
+    <color name="green"> #27AE60 </color>
     <color name="white_button">#EAECEE</color>
     <color name="red">#F1948A</color>
 </resources>

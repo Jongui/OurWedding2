@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="80dp"
     android:background="@color/bgContent"
     android:baselineAligned="false"
     android:orientation="horizontal">
@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/left_title_part"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_weight="3"
         android:background="@color/bgTitleLeft"
         android:gravity="center_horizontal"
@@ -54,6 +54,7 @@
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
             android:singleLine="true"
+            android:text="@string/user_name_ad"
             android:textColor="@android:color/black"
             android:textSize="16dp" />
 
@@ -61,13 +62,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_below="@+id/title_text_2"
             android:layout_alignParentRight="true">
 
             <ImageView
                 android:id="@+id/title_image_1"
                 android:contentDescription="@string/contentImgCard"
-                android:layout_width="10dp"
-                android:layout_height="10dp" />
+                android:src="@drawable/ic_confirm_green"
+                android:layout_marginTop="5dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
 
             <TextView
                 android:id="@+id/title_text_3"
@@ -75,8 +79,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="@string/confirmed"
+                android:layout_marginTop="5dp"
                 android:textColor="@android:color/black"
-                android:textSize="12dp" />
+                android:textSize="14dp" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

@@ -1,14 +1,15 @@
 package joaogd53.com.br.ourweddingapp.thread;
 
 import android.app.Activity;
-import android.content.Context;
 import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.ConnectException;
 import java.net.URLConnection;
@@ -18,10 +19,6 @@ import java.util.Locale;
 import joaogd53.com.br.ourweddingapp.R;
 import joaogd53.com.br.ourweddingapp.application.OurWeddingApp;
 import joaogd53.com.br.ourweddingapp.model.Guest;
-
-/**
- * Created by root on 31/10/16.
- */
 
 public class UpdateGuestsRunnable extends AbstractConnection {
     private List<Guest> guestList;
@@ -56,7 +53,29 @@ public class UpdateGuestsRunnable extends AbstractConnection {
 
     @Override
     public void writeInput(URLConnection connection) throws IOException {
+        JSONObject jsonObject;
+        String returnString;
+        String ret = "";
+        try {
+            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            while ((returnString = in.readLine()) != null) {
+                ret = returnString;
+            }
+            jsonObject = new JSONObject(ret);
+            this.returnCode = Integer.parseInt(jsonObject.get("status").toString());
+            switch (this.returnCode) {
+                case 0:
+                    JSONArray arrayGuests = jsonObject.getJSONArray("guests");
+                    for (int i = 0; i < arrayGuests.length(); i++) {
+                        JSONObject objectGuest = arrayGuests.getJSONObject(i);
+                        Guest.GuestBuilder.buildGuestFromJson(objectGuest);
+                    }
+                    break;
+            }
 
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

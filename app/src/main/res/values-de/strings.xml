@@ -78,4 +78,5 @@
         <item>Wird kommen</item>
         <item>Wird nicht kommen</item>
     </string-array>
+    <string name="not_going">Geht nicht</string>
 </resources>

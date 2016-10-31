@@ -87,11 +87,13 @@
     <string name="comment_text_empty">Comment text is empty</string>
     <string name="comment_to_long">Comment to long!</string>
     <string name="comment_limit">Please write less then 200 characters!</string>
-    <string name="user_name_ad" translatable="false">User Name ad</string>
+    <string name="user_name_ad" translatable="false">User Name additional</string>
     <string name="comment_not_save">Comment not save</string>
     <string name="comment_internal_error">An internal error occurred. Please forgive us :(</string>
     <string name="see_it_on_maps">See it on maps</string>
     <string name="titleConfirmPresence">Confirm presence for&#8230;</string>
+    <string name="not_going">Not going</string>
+    <string name="changes_saved">Changes saved</string>
     <plurals name="comments">
         <item quantity="zero">Comment zero</item>
         <item quantity="one">%d comment</item>

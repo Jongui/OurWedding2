@@ -12,7 +12,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.IntegerRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -42,7 +41,6 @@ import com.google.android.gms.common.api.ResultCallback;
 
 import joaogd53.com.br.customViews.CountDownView;
 import joaogd53.com.br.dialog.ConfirmPresenceDialogFragment;
-import joaogd53.com.br.dialog.StoryCommentDialogFragment;
 import joaogd53.com.br.imageloader.ImageLoader;
 import joaogd53.com.br.ourweddingapp.application.OurWeddingApp;
 import joaogd53.com.br.ourweddingapp.model.Guest;
@@ -345,16 +343,20 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.mnu_story) {
             this.currentFragment = FragmentManagement.STORY_FRAGMENT;
             FragmentManagement.getInstance().callFragment(this.currentFragment, null);
-        } else if(id == R.id.mnu_confirm){
-            DialogFragment cpdf = new ConfirmPresenceDialogFragment();
-            String code = OurWeddingApp.getInstance().getUser().getCode();
-            ((ConfirmPresenceDialogFragment) cpdf).setCode(code);
-            cpdf.show(this.getFragmentManager(), "tag");
+        } else if (id == R.id.mnu_confirm) {
+            this.callConfirmationDialogFragment();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void callConfirmationDialogFragment() {
+        DialogFragment cpdf = new ConfirmPresenceDialogFragment();
+        String code = OurWeddingApp.getInstance().getUser().getCode();
+        ((ConfirmPresenceDialogFragment) cpdf).setCode(code);
+        cpdf.show(this.getFragmentManager(), "tag");
     }
 
     @Override
@@ -395,6 +397,9 @@ public class MainActivity extends AppCompatActivity
                 intent.setData(Uri.parse("mailto:joaogd53@gmail.com")); // or just "mailto:" for blank
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
                 startActivity(intent);
+                if (position == 2) {
+                    MainActivity.this.callConfirmationDialogFragment();
+                }
             }
         });
         AlertDialog ad = builder.create();
