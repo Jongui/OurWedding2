@@ -79,4 +79,5 @@
         <item>Wird nicht kommen</item>
     </string-array>
     <string name="not_going">Geht nicht</string>
+    <string name="changes_saved">Änderungen gespeichert</string>
 </resources>

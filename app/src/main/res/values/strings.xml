@@ -30,9 +30,9 @@
     <string name="selectGuestName">Who are you?</string>
     <string name="ok" translatable="false">OK</string>
     <!--Teste -->
-    <string name="server_client_id" translatable="false">104975393991-bve0b73f1mit0htcqasfnivtsqf9i40v.apps.googleusercontent.com</string>
+    <!--<string name="server_client_id" translatable="false">104975393991-bve0b73f1mit0htcqasfnivtsqf9i40v.apps.googleusercontent.com</string>-->
     <!-- Producção -->
-    <!--<string name="server_client_id" translatable="false">938883859289-0i5u6sno6gc358m2ev09ucujdkvjq4ih.apps.googleusercontent.com</string>-->
+    <string name="server_client_id" translatable="false">938883859289-0i5u6sno6gc358m2ev09ucujdkvjq4ih.apps.googleusercontent.com</string>
     <string name="confirmed">Confirmed</string>
     <string name="invited">Invited</string>
     <string name="quota_date">Date</string>
