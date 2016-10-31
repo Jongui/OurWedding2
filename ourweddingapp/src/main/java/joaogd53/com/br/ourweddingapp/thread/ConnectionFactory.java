@@ -19,6 +19,7 @@ public class ConnectionFactory {
     public static final int GET_STORY_COMMENTS_SERVLET = 9;
     public static final int SAVE_COMMENT_RUNNABLE = 10;
     public static final int GET_ALL_STORIES_SERVLET = 11;
+    public static final int UPDATE_GUESTS_SERLVET = 12;
 
     private ConnectionFactory() {
     }
@@ -91,6 +92,9 @@ public class ConnectionFactory {
                     break;
                 case GET_ALL_STORIES_SERVLET:
                     url = new URL("http://192.168.100.2:8080/OurWedding/GetAllStoriesServlet");
+                    break;
+                case UPDATE_GUESTS_SERLVET:
+                    url = new URL("http://192.168.100.2:8080/OurWedding/UpdateGuestsServlet");
                     break;
 
             }

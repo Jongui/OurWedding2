@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialog_fragment_width"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:id="@+id/imgGuest"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/contentImgCard"
+        android:textSize="26dp" />
+
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:text="@string/user_name_ad"
+        android:textSize="16dp" />
+
+
+    <Spinner
+        android:id="@+id/spn_status"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.75" />
+</LinearLayout>

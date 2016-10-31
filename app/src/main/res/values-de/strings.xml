@@ -18,7 +18,7 @@
     <string name="honey_moon">Hochzeitsreise</string>
     <string name="invited">Eingeladen</string>
     <string name="linkToMaps">Sehe in Maps</string>
-    <string name="loading">L&#8230;dt&#8230;</string>
+    <string name="loading">L&#228;dt&#8230;</string>
     <string name="selectGuestName">Wer sind Sie?</string>
     <string name="sign_in">Einlogen</string>
     <string name="sign_out">Auslogen</string>
@@ -72,5 +72,10 @@
     <string name="comment_not_save">Kommentar nicht gespeichert</string>
     <string name="see_it_on_maps">See es in Maps</string>
     <string name="info">Hier clicken</string>
-
+    <string name="titleConfirmPresence">Anwesenheit bestätigen für&#8230;</string>
+    <string-array name="status">
+        <item>Wei&#223; noch nicht</item>
+        <item>Wird kommen</item>
+        <item>Wird nicht kommen</item>
+    </string-array>
 </resources>

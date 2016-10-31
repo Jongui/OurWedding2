@@ -114,6 +114,19 @@ public class Story {
         return this.comments;
     }
 
+    public void addComment(StoryComment comment) {
+        boolean found = false;
+        for (StoryComment c : this.comments) {
+            if (c.getPosition() == comment.getPosition()) {
+                found = true;
+                c = comment;
+                break;
+            }
+        }
+        if (!found) this.comments.add(comment);
+
+    }
+
     public static class StoryBuilder {
         public static Story buildFromJson(JSONObject jsonObject) throws JSONException {
             int idStory = jsonObject.getInt("idStory");

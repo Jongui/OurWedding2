@@ -15,6 +15,7 @@ public class Guest {
     private Uri personPhoto;
     private int status;
     private int age;
+    private String code;
     private static HashMap<Integer, Guest> guestHashMap;
 
     static {
@@ -88,6 +89,22 @@ public class Guest {
         this.age = age;
     }
 
+    public String getCode() {
+        return this.code;
+    }
+
+    public JSONObject toJson() throws JSONException {
+        JSONObject ret = new JSONObject();
+        ret.put("age", this.age);
+        ret.put("email", this.personEmail);
+        ret.put("name", this.personName);
+        ret.put("photo", this.personPhoto);
+        ret.put("status", this.status);
+        ret.put("idGuest", this.idGuest);
+        ret.put("code", this.code);
+        return ret;
+    }
+
     public static class GuestBuilder {
         public static Guest buildUser(String personName, String personEmail, Uri personPhoto) {
             Guest user = new Guest();
@@ -120,6 +137,7 @@ public class Guest {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+            ret.code = jsonObject.getString("code");
             ret.age = jsonObject.getInt("age");
             return ret;
         }

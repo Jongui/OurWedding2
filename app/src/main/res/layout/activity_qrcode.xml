@@ -14,7 +14,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_blue"
+        android:background="@drawable/button_marsala"
         android:onClick="qrScanner"
         android:text="@string/qr_code_reader"
         android:textSize="16sp"
@@ -27,7 +27,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_blue"
+        android:background="@drawable/button_marsala"
         android:onClick="informCode"
         android:text="@string/inform_code"
         android:textSize="16dp"

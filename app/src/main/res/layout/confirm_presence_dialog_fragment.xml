@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtTitleConfirmPresence"
+        android:layout_width="@dimen/dialog_fragment_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/titleConfirmPresence"
+        android:textAlignment="center"
+        android:textColor="@color/bgTitleRight"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/inviteGuestList"
+        android:layout_width="@dimen/dialog_fragment_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitleComment"
+        android:background="@color/bgTitleRight" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgTitleRight"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/button_green"
+            android:textColor="@color/mainTextColor"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:text="@string/btnSave"/>
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="68dp"
+            android:background="@drawable/button_red"
+            android:textColor="@color/mainTextColor"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:text="@string/btnCancel"/>
+    </LinearLayout>
+</LinearLayout>

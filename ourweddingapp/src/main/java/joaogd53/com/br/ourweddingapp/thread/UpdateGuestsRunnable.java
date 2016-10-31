@@ -1,34 +1,35 @@
 package joaogd53.com.br.ourweddingapp.thread;
 
 import android.app.Activity;
+import android.content.Context;
 import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.ConnectException;
 import java.net.URLConnection;
+import java.util.List;
 import java.util.Locale;
 
 import joaogd53.com.br.ourweddingapp.R;
 import joaogd53.com.br.ourweddingapp.application.OurWeddingApp;
-import joaogd53.com.br.ourweddingapp.model.Story;
-import joaogd53.com.br.ourweddingapp.model.StoryComment;
+import joaogd53.com.br.ourweddingapp.model.Guest;
 
 /**
- * Created by root on 20/10/16.
+ * Created by root on 31/10/16.
  */
-public class GetStoryCommentsRunnable extends AbstractConnection {
-    private Story story;
 
-    public GetStoryCommentsRunnable(Activity context, Story story) {
+public class UpdateGuestsRunnable extends AbstractConnection {
+    private List<Guest> guestList;
+    private Activity context;
+
+    public UpdateGuestsRunnable(Activity context, List<Guest> guestList) {
         super(context);
-        this.story = story;
+        this.guestList = guestList;
     }
 
     @Override
@@ -39,7 +40,12 @@ public class GetStoryCommentsRunnable extends AbstractConnection {
             jsonObject.put("tokenId", OurWeddingApp.getInstance().getTokenId());
             jsonObject.put("email", OurWeddingApp.getInstance().getUser().getPersonEmail());
             jsonObject.put("idGuest", OurWeddingApp.getInstance().getUser().getIdGuest());
-            jsonObject.put("idStory", this.story.getIdStory());
+            JSONArray jsonArray = new JSONArray();
+            for (Guest g : this.guestList) {
+                JSONObject json = g.toJson();
+                jsonArray.put(json);
+            }
+            jsonObject.put("guests", jsonArray);
             OutputStreamWriter out = new OutputStreamWriter(connection.getOutputStream());
             out.write(jsonObject.toString());
             out.close();
@@ -50,31 +56,14 @@ public class GetStoryCommentsRunnable extends AbstractConnection {
 
     @Override
     public void writeInput(URLConnection connection) throws IOException {
-        JSONObject jsonObject;
-        String returnString;
-        String ret = "";
-        try {
-            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            while ((returnString = in.readLine()) != null) {
-                ret = returnString;
-            }
-            jsonObject = new JSONObject(ret);
-            this.returnCode = Integer.parseInt(jsonObject.get("status").toString());
-            JSONArray jsonArray = jsonObject.getJSONArray("comments");
-            for (int i = 0; i < jsonArray.length(); i++) {
-                StoryComment comment = StoryComment.StoryCommentBuilder.buildFromJson(jsonArray.getJSONObject(i), this.story);
-                this.story.addComment(comment);
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
     }
 
     @Override
     public void run() {
         try {
             URLConnection connection = ConnectionFactory.getInstance()
-                    .connectionFactory(ConnectionFactory.GET_STORY_COMMENTS_SERVLET);
+                    .connectionFactory(ConnectionFactory.UPDATE_GUESTS_SERLVET);
             this.writeOutput(connection);
             this.writeInput(connection);
         } catch (ConnectException e) {
@@ -85,10 +74,10 @@ public class GetStoryCommentsRunnable extends AbstractConnection {
                     Toast.makeText(context, message, Toast.LENGTH_LONG).show();
                 }
             });
-            this.returnCode = 1;
             e.printStackTrace();
         } catch (IOException e) {
-            this.returnCode = 2;
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

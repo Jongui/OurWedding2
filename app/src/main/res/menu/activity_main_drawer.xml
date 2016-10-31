@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp_navigation">
         <item
             android:id="@+id/mnu_home"
             android:icon="@drawable/ico_home"
@@ -26,6 +27,13 @@
             android:id="@+id/mnu_credits"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/credits" />
+    </group>
+    <group android:checkableBehavior="single"
+            android:id="@+id/grp_confirm">
+        <item
+            android:id="@+id/mnu_confirm"
+            android:icon="@drawable/ic_confirm_black"
+            android:title="@string/confirm_presence"/>
     </group>
 
     <!--<item android:title="Communicate">-->

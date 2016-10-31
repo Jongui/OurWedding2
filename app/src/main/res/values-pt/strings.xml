@@ -72,4 +72,10 @@
     <string name="comment_not_save">Comentário não salvo</string>
     <string name="see_it_on_maps">Veja no Maps</string>
     <string name="info">Clique aqui</string>
+    <string name="titleConfirmPresence">Confirmar presença para&#8230;</string>
+    <string-array name="status">
+        <item>Não sei</item>
+        <item>Vai vir</item>
+        <item>Não vai vir</item>
+    </string-array>
 </resources>

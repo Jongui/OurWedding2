@@ -21,9 +21,7 @@ public class StoryCommentAdapter extends BaseAdapter {
 
     public StoryCommentAdapter(Context context, Story story) {
         this.story = story;
-        if (this.story.getComments().size() == 0) {
-            OurWeddingApp.getInstance().getStoryComments(story);
-        }
+        OurWeddingApp.getInstance().getStoryComments(story);
         this.context = context;
     }
 

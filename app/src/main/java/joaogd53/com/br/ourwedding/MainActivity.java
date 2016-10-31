@@ -3,6 +3,7 @@ package joaogd53.com.br.ourwedding;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
+import android.app.DialogFragment;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.IntegerRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -39,6 +41,8 @@ import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 
 import joaogd53.com.br.customViews.CountDownView;
+import joaogd53.com.br.dialog.ConfirmPresenceDialogFragment;
+import joaogd53.com.br.dialog.StoryCommentDialogFragment;
 import joaogd53.com.br.imageloader.ImageLoader;
 import joaogd53.com.br.ourweddingapp.application.OurWeddingApp;
 import joaogd53.com.br.ourweddingapp.model.Guest;
@@ -57,8 +61,8 @@ public class MainActivity extends AppCompatActivity
     private TextView txtUserName;
     private TextView txtEmail;
     private CountDownView countDownView;
-//    private boolean loginRunning;
-    private int currentFragment = FragmentManagement.INIT_FRAGMENT;
+    //    private boolean loginRunning;
+    private int currentFragment = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,8 +77,15 @@ public class MainActivity extends AppCompatActivity
         txtUserName = (TextView) view.findViewById(R.id.txtUserName);
         txtEmail = (TextView) view.findViewById(R.id.txtEmail);
         countDownView = (CountDownView) this.findViewById(R.id.countDownView);
-        if (this.currentFragment == 0)
-            this.currentFragment = FragmentManagement.INIT_FRAGMENT;
+        try {
+            String frag = this.getIntent().getExtras().get("notificationFragment").toString();
+            Log.d("notificationFragment", frag);
+            currentFragment = Integer.parseInt(frag);
+            Log.d("currentFragment", Integer.toString(this.currentFragment));
+        } catch (NullPointerException ex) {
+            if (this.currentFragment == 0)
+                this.currentFragment = FragmentManagement.INIT_FRAGMENT;
+        }
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(this);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
@@ -334,6 +345,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.mnu_story) {
             this.currentFragment = FragmentManagement.STORY_FRAGMENT;
             FragmentManagement.getInstance().callFragment(this.currentFragment, null);
+        } else if(id == R.id.mnu_confirm){
+            DialogFragment cpdf = new ConfirmPresenceDialogFragment();
+            String code = OurWeddingApp.getInstance().getUser().getCode();
+            ((ConfirmPresenceDialogFragment) cpdf).setCode(code);
+            cpdf.show(this.getFragmentManager(), "tag");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

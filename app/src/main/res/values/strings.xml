@@ -91,10 +91,16 @@
     <string name="comment_not_save">Comment not save</string>
     <string name="comment_internal_error">An internal error occurred. Please forgive us :(</string>
     <string name="see_it_on_maps">See it on maps</string>
+    <string name="titleConfirmPresence">Confirm presence for&#8230;</string>
     <plurals name="comments">
         <item quantity="zero">Comment zero</item>
         <item quantity="one">%d comment</item>
         <item quantity="many">%d comments</item>
         <item quantity="other">%d comments</item>
     </plurals>
+    <string-array name="status">
+        <item>Don\'t know yet</item>
+        <item>Will come</item>
+        <item>Will not come</item>
+    </string-array>
 </resources>

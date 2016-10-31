@@ -26,6 +26,7 @@ import joaogd53.com.br.ourweddingapp.thread.GuestsForQrCodeRunnable;
 import joaogd53.com.br.ourweddingapp.thread.LoginRunnable;
 import joaogd53.com.br.ourweddingapp.thread.QuotaSaveRunnable;
 import joaogd53.com.br.ourweddingapp.thread.SaveCommentRunnable;
+import joaogd53.com.br.ourweddingapp.thread.UpdateGuestsRunnable;
 import joaogd53.com.br.ourweddingapp.thread.UpdateUserRunnable;
 
 public class OurWeddingApp {
@@ -273,4 +274,14 @@ public class OurWeddingApp {
         return new ArrayList<>(hashMap.values());
     }
 
+    public void updateGuests(List<Guest> guests) {
+        UpdateGuestsRunnable runnable = new UpdateGuestsRunnable((Activity) this.context, guests);
+        Thread t = new Thread(runnable);
+        t.start();
+        try {
+            t.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

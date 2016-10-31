@@ -35,14 +35,14 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:contentDescription="@string/contentImgCard"
-            android:textSize="26sp" />
+            android:textSize="26dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtUserName"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="5dp"
-            android:textSize="12sp"
+            android:textSize="12dp"
             android:maxLines="1"
             android:text="@string/user_name_ad"/>
     </LinearLayout>
@@ -55,5 +55,5 @@
         android:layout_marginTop="10dp"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
-        android:textSize="12sp" />
+        android:textSize="12dp" />
 </LinearLayout>
