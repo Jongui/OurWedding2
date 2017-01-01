@@ -39,78 +39,78 @@ public class ConnectionFactory {
         try {
             URL url = new URL("http://");
             switch (servlet) {
-//                case LOGIN_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/LoginServlet");
-//                    break;
-//                case UPDATE_USER_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/UpdateUserServlet");
-//                    break;
-//                case READ_QR_CODE_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/ReadQRCodeServlet");
-//                    break;
-//                case GET_ALL_GUESTS_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetAllGuestsServer");
-//                    break;
-//                case GET_ALL_HONEY_MOON_GIFTS_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetAllGiftsServlet");
-//                    break;
-//                case QUOTA_SAVE_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/QuotaSaveServlet");
-//                    break;
-//                case GET_LAST_STORIES_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetLastStoryServlet");
-//                    break;
-//                case GUEST_BY_ID_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GuestByIdServlet");
-//                    break;
-//                case GET_STORY_COMMENTS_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetStoryCommentsServlet");
-//                    break;
-//                case SAVE_COMMENT_RUNNABLE:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/SaveCommentServlet");
-//                    break;
-//                case GET_ALL_STORIES_SERVLET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetAllStoriesServlet");
-//                    break;
-//                case UPDATE_GUESTS_SERLVET:
-//                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/UpdateGuestsServlet");
-//                    break;
                 case LOGIN_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/LoginServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/LoginServlet");
                     break;
                 case UPDATE_USER_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/UpdateUserServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/UpdateUserServlet");
                     break;
                 case READ_QR_CODE_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/ReadQRCodeServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/ReadQRCodeServlet");
                     break;
                 case GET_ALL_GUESTS_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/GetAllGuestsServer");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetAllGuestsServer");
                     break;
                 case GET_ALL_HONEY_MOON_GIFTS_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/GetAllGiftsServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetAllGiftsServlet");
                     break;
                 case QUOTA_SAVE_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/QuotaSaveServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/QuotaSaveServlet");
                     break;
                 case GET_LAST_STORIES_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/GetLastStoryServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetLastStoryServlet");
                     break;
                 case GUEST_BY_ID_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/GuestByIdServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GuestByIdServlet");
                     break;
                 case GET_STORY_COMMENTS_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/GetStoryCommentsServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetStoryCommentsServlet");
                     break;
                 case SAVE_COMMENT_RUNNABLE:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/SaveCommentServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/SaveCommentServlet");
                     break;
                 case GET_ALL_STORIES_SERVLET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/GetAllStoriesServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/GetAllStoriesServlet");
                     break;
                 case UPDATE_GUESTS_SERLVET:
-                    url = new URL("http://192.168.100.2:8080/OurWedding/UpdateGuestsServlet");
+                    url = new URL("http://ourweddingapplicati-env.us-east-1.elasticbeanstalk.com/UpdateGuestsServlet");
                     break;
+//                case LOGIN_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/LoginServlet");
+//                    break;
+//                case UPDATE_USER_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/UpdateUserServlet");
+//                    break;
+//                case READ_QR_CODE_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/ReadQRCodeServlet");
+//                    break;
+//                case GET_ALL_GUESTS_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/GetAllGuestsServer");
+//                    break;
+//                case GET_ALL_HONEY_MOON_GIFTS_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/GetAllGiftsServlet");
+//                    break;
+//                case QUOTA_SAVE_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/QuotaSaveServlet");
+//                    break;
+//                case GET_LAST_STORIES_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/GetLastStoryServlet");
+//                    break;
+//                case GUEST_BY_ID_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/GuestByIdServlet");
+//                    break;
+//                case GET_STORY_COMMENTS_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/GetStoryCommentsServlet");
+//                    break;
+//                case SAVE_COMMENT_RUNNABLE:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/SaveCommentServlet");
+//                    break;
+//                case GET_ALL_STORIES_SERVLET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/GetAllStoriesServlet");
+//                    break;
+//                case UPDATE_GUESTS_SERLVET:
+//                    url = new URL("http://192.168.122.1:8080/OurWedding/UpdateGuestsServlet");
+//                    break;
             }
             URLConnection connection = url.openConnection();
             connection.setRequestProperty("content-type", "application/json; charset=utf-8");

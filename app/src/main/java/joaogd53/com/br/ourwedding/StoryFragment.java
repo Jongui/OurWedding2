@@ -1,6 +1,8 @@
 package joaogd53.com.br.ourwedding;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,45 +32,44 @@ public class StoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_story,
                 container, false);
-        List<Story> allStories = OurWeddingApp.getInstance().getStories();
-        rvwStories = (RecyclerView) rootView.findViewById(R.id.rvwStories);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this.getActivity());
-        rvwStories.setLayoutManager(mLayoutManager);
-//        rvwInit.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
-        rvwStories.setItemAnimator(new DefaultItemAnimator());
-        rvwStories.setAdapter(new StoryAdapter(allStories, this.getActivity()));
-        rvwStories.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
-//        CardView cardView = (CardView) rootView.findViewById(R.id.storyCard);
-//        ImageView imgCard = (ImageView) rootView.findViewById(R.id.imgCard);
-//        final Story story = OurWeddingApp.getInstance().lastStory();
-//        try {
-//            Context context = this.getActivity();
-//            ImageLoader il = new ImageLoader(context);
-//            il.displayImage(story.getImage().toString(), imgCard);
-//        } catch (NullPointerException ex) {
-//            imgCard.setImageResource(R.drawable.img_card);
-//        }
-//        txtTitle = (TextView) rootView.findViewById(R.id.txtTitle);
-//        txtText = (TextView) rootView.findViewById(R.id.txtText);
-//        txtSignature = (TextView) rootView.findViewById(R.id.txtSignature);
-//        txtTitle.setText(story.getTitle());
-//        txtText.setText(story.getText());
-//        txtSignature.setText(story.getSignature());
-//        btnComment = (Button) rootView.findViewById(R.id.btnComment);
-//        int replace = story.getCommentsCount();
-//        String text = rootView.getResources().getQuantityString(R.plurals.comments, replace);
-//        String btnText = String.format(text, replace);
-//        btnComment.setText(btnText);
-//        btnComment.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Activity activity = StoryFragment.this.getActivity();
-////                FragmentManager fm = StoryFragment.this.getFragmentManager();
-//                DialogFragment scdf = new StoryCommentDialogFragment();
-//                ((StoryCommentDialogFragment) scdf).setStory(story);
-//                scdf.show(activity.getFragmentManager(), "tag");
-//            }
-//        });
+        new StoryAsyncTask(this.getActivity(), rootView, mLayoutManager).execute();
+//        List<Story> allStories = OurWeddingApp.getInstance().getStories();
+        rvwStories = (RecyclerView) rootView.findViewById(R.id.rvwStories);
+//        rvwStories.setLayoutManager(mLayoutManager);
+//        rvwStories.setItemAnimator(new DefaultItemAnimator());
+//        rvwStories.setAdapter(new StoryAdapter(allStories, this.getActivity()));
+//        rvwStories.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
         return rootView;
     }
+
+    private class StoryAsyncTask extends AsyncTask<Void, Void, Void> {
+        private Context context;
+        private View view;
+        private List<Story> allStories;
+        private RecyclerView.LayoutManager mLayoutManager;
+
+        protected StoryAsyncTask(Context context, View view, RecyclerView.LayoutManager mLayoutManager) {
+            this.context = context;
+            this.view = view;
+            this.mLayoutManager = mLayoutManager;
+        }
+
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            this.allStories = OurWeddingApp.getInstance().getStories();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            view.findViewById(R.id.loadingPanel).setVisibility(View.GONE);
+            rvwStories.setLayoutManager(this.mLayoutManager);
+            rvwStories.setItemAnimator(new DefaultItemAnimator());
+            rvwStories.setAdapter(new StoryAdapter(allStories, this.context));
+            rvwStories.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
+        }
+    }
+
 }

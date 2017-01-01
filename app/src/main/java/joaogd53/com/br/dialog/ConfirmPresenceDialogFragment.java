@@ -1,6 +1,8 @@
 package joaogd53.com.br.dialog;
 
 import android.app.DialogFragment;
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +23,7 @@ public class ConfirmPresenceDialogFragment extends DialogFragment implements Vie
 
     private String code;
     private GuestConfirmAdapter adapter;
+    private ListView inviteGuestList;
 
     public ConfirmPresenceDialogFragment() {
 
@@ -34,10 +37,11 @@ public class ConfirmPresenceDialogFragment extends DialogFragment implements Vie
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstance) {
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         View view = inflater.inflate(R.layout.confirm_presence_dialog_fragment, container);
-        List<Guest> guests = OurWeddingApp.getInstance().findInvitation(this.code);
-        adapter = new GuestConfirmAdapter(guests, this.getActivity());
-        ListView inviteGuestList = (ListView) view.findViewById(R.id.inviteGuestList);
-        inviteGuestList.setAdapter(adapter);
+//        List<Guest> guests = OurWeddingApp.getInstance().findInvitation(this.code);
+//        adapter = new GuestConfirmAdapter(guests, this.getActivity());
+        inviteGuestList = (ListView) view.findViewById(R.id.inviteGuestList);
+        new ConfirmPresenceAsyncTask(this.getActivity(), view).execute();
+//        inviteGuestList.setAdapter(adapter);
         Button btnSave = (Button) view.findViewById(R.id.btnSave);
         btnSave.setOnClickListener(this);
         Button btnCancel = (Button) view.findViewById(R.id.btnCancel);
@@ -60,4 +64,31 @@ public class ConfirmPresenceDialogFragment extends DialogFragment implements Vie
         }
         this.dismiss();
     }
+
+    private class ConfirmPresenceAsyncTask extends AsyncTask<Void, Void, Void> {
+
+        private Context context;
+        private View view;
+        private List<Guest> guests;
+
+        protected ConfirmPresenceAsyncTask(Context context, View view){
+            this.context = context;
+            this.view = view;
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            guests = OurWeddingApp.getInstance().findInvitation(code);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            view.findViewById(R.id.loadingPanel).setVisibility(View.GONE);
+            view.findViewById(R.id.inviteGuestList).setVisibility(View.VISIBLE);
+            adapter = new GuestConfirmAdapter(guests, this.context);
+            inviteGuestList.setAdapter(adapter);
+        }
+    }
+
 }

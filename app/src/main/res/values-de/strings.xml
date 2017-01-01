@@ -80,4 +80,5 @@
     </string-array>
     <string name="not_going">Geht nicht</string>
     <string name="changes_saved">Änderungen gespeichert</string>
+    <string name="guests_not_found">Keine Gäste gefunden</string>
 </resources>

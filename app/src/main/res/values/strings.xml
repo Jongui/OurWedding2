@@ -94,6 +94,7 @@
     <string name="titleConfirmPresence">Confirm presence for&#8230;</string>
     <string name="not_going">Not going</string>
     <string name="changes_saved">Changes saved</string>
+    <string name="guests_not_found">Guests not found</string>
     <plurals name="comments">
         <item quantity="zero">Comment zero</item>
         <item quantity="one">%d comment</item>

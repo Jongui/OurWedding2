@@ -9,11 +9,11 @@ import android.app.ProgressDialog;
 public abstract class AbstractConnection implements CustomRunnableInterface {
     protected Activity context;
     protected int returnCode;
-    protected ProgressDialog mProgressDialog;
+//    protected ProgressDialog mProgressDialog;
 
     public AbstractConnection(Activity context) {
         this.context = context;
-        this.mProgressDialog = new ProgressDialog(context);
+//        this.mProgressDialog = new ProgressDialog(context);
     }
 
     public int getReturnCode() {

@@ -83,9 +83,9 @@ public class OurWeddingApp {
     }
 
     public List<HoneyMoonGift> getHoneyMoonGifts() {
-        if (mProgressDialog != null) {
-            mProgressDialog.show();
-        }
+//        if (mProgressDialog != null) {
+//            mProgressDialog.show();
+//        }
         GetAllHoneyMoonGiftsRunnable runnable = new GetAllHoneyMoonGiftsRunnable((Activity) this.context);
         Thread t = new Thread(runnable);
         t.start();
@@ -94,9 +94,9 @@ public class OurWeddingApp {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if (mProgressDialog != null) {
-            mProgressDialog.dismiss();
-        }
+//        if (mProgressDialog != null) {
+//            mProgressDialog.dismiss();
+//        }
         HashMap<Integer, HoneyMoonGift> hashMap = HoneyMoonGift.getAllInstances();
         return new ArrayList<>(hashMap.values());
     }
@@ -137,9 +137,9 @@ public class OurWeddingApp {
     }
 
     public List<Guest> getGuests() {
-        if (mProgressDialog != null) {
-            mProgressDialog.show();
-        }
+//        if (mProgressDialog != null) {
+//            mProgressDialog.show();
+//        }
         GetAllGuestsRunnable runnable = new GetAllGuestsRunnable((Activity) this.context);
         Thread t = new Thread(runnable);
         t.start();
@@ -148,9 +148,9 @@ public class OurWeddingApp {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if (mProgressDialog != null) {
-            mProgressDialog.dismiss();
-        }
+//        if (mProgressDialog != null) {
+//            mProgressDialog.dismiss();
+//        }
         HashMap<Integer, Guest> hashMap = Guest.getAllInstances();
         return new ArrayList<>(hashMap.values());
     }
@@ -173,9 +173,9 @@ public class OurWeddingApp {
     }
 
     public List<Guest> findInvitation(String qrCode) {
-        if (mProgressDialog != null) {
-            mProgressDialog.show();
-        }
+//        if (mProgressDialog != null) {
+//            mProgressDialog.show();
+//        }
         GuestsForQrCodeRunnable runnable = new GuestsForQrCodeRunnable((Activity) this.context, qrCode);
         Thread t = new Thread(runnable);
         t.start();
@@ -184,9 +184,9 @@ public class OurWeddingApp {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if (mProgressDialog != null) {
-            mProgressDialog.dismiss();
-        }
+//        if (mProgressDialog != null) {
+//            mProgressDialog.dismiss();
+//        }
         return runnable.getGuestList();
     }
 
