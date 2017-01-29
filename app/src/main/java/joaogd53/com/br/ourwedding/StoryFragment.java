@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import joaogd53.com.br.adapter.StoryAdapter;
@@ -49,7 +51,7 @@ public class StoryFragment extends Fragment {
         private List<Story> allStories;
         private RecyclerView.LayoutManager mLayoutManager;
 
-        protected StoryAsyncTask(Context context, View view, RecyclerView.LayoutManager mLayoutManager) {
+        private StoryAsyncTask(Context context, View view, RecyclerView.LayoutManager mLayoutManager) {
             this.context = context;
             this.view = view;
             this.mLayoutManager = mLayoutManager;
@@ -59,6 +61,12 @@ public class StoryFragment extends Fragment {
         @Override
         protected Void doInBackground(Void... params) {
             this.allStories = OurWeddingApp.getInstance().getStories();
+            Collections.sort(this.allStories, new Comparator<Story>() {
+                @Override
+                public int compare(Story story1, Story story2) {
+                    return story1.getIdStory() - story2.getIdStory();
+                }
+            });
             return null;
         }
 
