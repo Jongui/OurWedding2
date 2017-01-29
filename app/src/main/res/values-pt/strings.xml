@@ -53,7 +53,7 @@
     <string name="story">História das nossas vidas</string>
     <string name="external_data_permission">Precisamos da sua permissão para salvar algumas figuras no cache</string>
     <string name="pictures_not_show">Algumas imagens não aparecerão, mas você pode mudar isso nas configurações do Android depois.</string>
-    <string name="bank_info">Você vai nos presentear com algo para a lua de mel? Por favor informe a data e valor transferidos :) Nossos dados bancários são:\n<b>Bank:</b> Santander\n<b>Conta Poupança:</b> 006459&#8211;9\n<b>Agência:</b>0813\n<b>CPF:</b>022.588.759&#8211;27\n<b>Nome:</b> Michele Simonian</string>
+    <string name="bank_info">Você vai nos presentear com algo para a lua de mel? Por favor informe a data e valor transferidos :) Nossos dados bancários são:\n<b>Bank:</b> Santander\n<b>Conta Poupança:</b> 006459&#8211;0\n<b>Agência:</b>0813\n<b>CPF:</b>022.588.759&#8211;27\n<b>Nome:</b> Michele Simonian</string>
     <plurals name="comments">
         <item quantity="zero">Comentar</item>
         <item quantity="one">%d comentário</item>

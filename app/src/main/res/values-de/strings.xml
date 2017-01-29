@@ -53,7 +53,7 @@
     <string name="story">Geschichten unserer Leben</string>
     <string name="external_data_permission">Wir benötigen Zulasung auf deinen Speichern um Bilder zu \'Cache\'.</string>
     <string name="pictures_not_show">Viele Bilder werden nicht angezeigt. Aber Sie könnes es später bei Android Einstelungen ändern</string>
-    <string name="bank_info">Wirst du uns etwas für die Hochzeitsreise schenken? Bitte gebe die Datum und Wert das du uns überwiesen hast! Unsere Banken infos sind:\n<b>Bank:</b> Santander\n<b>Konto:</b> 006459&#8211;9\n<b>Branch:</b>0813\n<b>CPF:</b>022.588.759&#8211;27\n<b>Name:</b> Michele Simonian</string>
+    <string name="bank_info">Wirst du uns etwas für die Hochzeitsreise schenken? Bitte gebe die Datum und Wert das du uns überwiesen hast! Unsere Banken infos sind:\n<b>Bank:</b> Santander\n<b>Konto:</b> 006459&#8211;0\n<b>Branch:</b>0813\n<b>CPF:</b>022.588.759&#8211;27\n<b>Name:</b> Michele Simonian</string>
     <plurals name="comments">
         <item quantity="zero">Kommentar</item>
         <item quantity="one">%d Kommentar</item>

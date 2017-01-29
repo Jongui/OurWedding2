@@ -30,9 +30,9 @@
     <string name="selectGuestName">Who are you?</string>
     <string name="ok" translatable="false">OK</string>
     <!--Teste -->
-    <!--<string name="server_client_id" translatable="false">104975393991-bve0b73f1mit0htcqasfnivtsqf9i40v.apps.googleusercontent.com</string>-->
+    <string name="server_client_id" translatable="false">104975393991-bve0b73f1mit0htcqasfnivtsqf9i40v.apps.googleusercontent.com</string>
     <!-- Producção -->
-    <string name="server_client_id" translatable="false">938883859289-0i5u6sno6gc358m2ev09ucujdkvjq4ih.apps.googleusercontent.com</string>
+    <!--<string name="server_client_id" translatable="false">938883859289-0i5u6sno6gc358m2ev09ucujdkvjq4ih.apps.googleusercontent.com</string>-->
     <string name="confirmed">Confirmed</string>
     <string name="invited">Invited</string>
     <string name="quota_date">Date</string>
@@ -75,7 +75,7 @@
     <string name="firstStory"><b>Hello people!</b>\n\nWe are very excited with our ceremony and that you will be there! But while the time for celebrating doesn\'t, we will tell some stories about us! Some of them are happy ones, other sad, but that\'s how we became us! Please keep track of this part of the app to know us better!\n\nMr. and (soon to be) Mrs. Dyck</string>
     <string name="external_data_permission">We need your permission to cache some pictures for the app</string>
     <string name="pictures_not_show">Many pictures will not be shown. But you can change it by your system\'s settings.</string>
-    <string name="bank_info">You\'re about to buy us some fun at our honey moon trip! Please inform us the date and value you trasfered to us! Our bank info are:\n<b>Bank:</b> Santander\n<b>Account:</b> 006459&#8211;9\n<b>Bank Branch:</b>0813\n<b>CPF:</b>022.588.759&#8211;27\n<b>Name:</b> Michele Simonian</string>
+    <string name="bank_info">You\'re about to buy us some fun at our honey moon trip! Please inform us the date and value you trasfered to us! Our bank info are:\n<b>Bank:</b> Santander\n<b>Account:</b> 006459&#8211;0\n<b>Bank Branch:</b>0813\n<b>CPF:</b>022.588.759&#8211;27\n<b>Name:</b> Michele Simonian</string>
     <string name="info">Click here</string>
     <string name="contentImgCard" translatable="false">Image for the story</string>
     <string name="comment" translatable="false">Comment</string>
