@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "104975393991",
+    "firebase_url": "https://evocative-nexus-89116.firebaseio.com",
+    "project_id": "evocative-nexus-89116",
+    "storage_bucket": "evocative-nexus-89116.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104975393991:android:1932a1d00f1e4b96",
+        "android_client_info": {
+          "package_name": "joaogd53.com.br.ourwedding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104975393991-mmpve5oofj00g18npd95rc4d0gv3qp1f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "joaogd53.com.br.ourwedding",
+            "certificate_hash": "D16C19BC6B963C2A22D7AF55B6635CE2E3099D61"
+          }
+        },
+        {
+          "client_id": "104975393991-1rgouro4fsipgqrb7bbie51m8nrg6dfk.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "104975393991-bve0b73f1mit0htcqasfnivtsqf9i40v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOzt5eqCKiqP0hPH26gi-8PgoUxzk5ycA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104975393991-1rgouro4fsipgqrb7bbie51m8nrg6dfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
