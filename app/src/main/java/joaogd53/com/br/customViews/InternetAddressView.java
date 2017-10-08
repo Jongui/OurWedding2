@@ -10,14 +10,16 @@ import android.widget.LinearLayout;
 /**
  * Created by root on 13/09/16.
  */
-public class InternetAddressView extends LinearLayout implements View.OnClickListener{
+public class InternetAddressView extends LinearLayout implements View.OnClickListener {
 
     private Uri uri;
+
     public InternetAddressView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setOnClickListener(this);
     }
-    public void setUri(Uri uri){
+
+    public void setUri(Uri uri) {
         this.uri = uri;
     }
 
